@@ -20,6 +20,18 @@ function initPosition() {
         y: Math.floor(Math.random() * HEIGHT),
     }
 }
+function outPosition() {
+    return {
+        x: 1000,
+        y: 1000,
+    }
+}
+function initPosition() {
+    return {
+        x: Math.floor(Math.random() * WIDTH),
+        y: Math.floor(Math.random() * HEIGHT),
+    }
+}
 
 function initHeadAndBody() {
     let head = initPosition();
@@ -88,7 +100,15 @@ let dinding5 = {
  
 let life = {
     color: "red",
-    position: initPosition(),
+    position: outPosition(),
+}
+
+function multiple(score){
+    if(score % 5 == 0){
+        life.position = initPosition();
+    }else if(score % 5 != 0){
+        life.position = outPosition();
+    }
 }
 
 let apple1 = {
@@ -179,6 +199,7 @@ function drawSpeed(speed) {
     speedCtx.fillStyle = "black"
     speedCtx.fillText(speed + ".ms ", 18, 22);
 }
+
 function draw() {
     setInterval(function() {
         let snakeLifeScore = document.getElementById("lifeBoard");
@@ -203,21 +224,8 @@ function draw() {
         drawSpeed(MOVE_INTERVAL);
         setAppleAndDiamond(apple1);
         setAppleAndDiamond(apple2);
-        let isPrime = true;
-        if (score >= 1) {
-            // looping through 2 to number-1
-            for (let i = 2; i < score; i++) {
-                if (score % i == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-            if (isPrime) {
-                setAppleAndDiamond(life);
-                drawDiamond(ctx, life.position.x, life.position.y, life.color);
-            }
-        }
-
+        setAppleAndDiamond(life);
+        drawDiamond(ctx, life.position.x, life.position.y, life.color);
         if(level ===2){
             for(let i = 0; i < dinding1.position.x.length; i++){
                 console.log("test")
@@ -297,7 +305,6 @@ function speedUp(score){
 
 function eatDiamond(snake, life) {
     if (snake.head.x == life.position.x && snake.head.y == life.position.y) {
-        life.position = initPosition();
         diamond++;
         score++;
         snake.body.push({x: snake.head.x, y: snake.head.y});
@@ -314,6 +321,7 @@ function eat(snake, apple) {
         var audio = new Audio('assets/eat.wav');
         audio.play();
         speedUp(score);
+        multiple(score);
     }
 }
 
