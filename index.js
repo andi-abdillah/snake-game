@@ -61,7 +61,7 @@ let snake1 = initSnake("black");
 let dinding1 = {
     position: {
         x: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-        y: [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
+        y: [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
     },
     color: "grey",
 }
@@ -69,7 +69,7 @@ let dinding1 = {
 let dinding2 = {
     position: {
         x: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-        y: [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]
+        y: [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10],
     },
     color: "grey",
 }
@@ -77,7 +77,7 @@ let dinding2 = {
 let dinding3 = {
     position: {
         x: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-        y: [15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15]
+        y: [15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15],
     },
     color: "grey",
 }
@@ -183,7 +183,7 @@ function drawScore(score) {
  
     scoreCtx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
     scoreCtx.font = "15px Arial";
-    scoreCtx.fillStyle = "black"
+    scoreCtx.fillStyle = "black";
     scoreCtx.fillText(score, 35, 22);
 }
 
@@ -194,7 +194,7 @@ function drawLevel(level) {
  
     levelCtx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
     levelCtx.font = "15px Arial";
-    levelCtx.fillStyle = "black"
+    levelCtx.fillStyle = "black";
     levelCtx.fillText("Level " + level, 18, 22);
 }
 function drawSpeed(speed) {
@@ -204,7 +204,7 @@ function drawSpeed(speed) {
  
     speedCtx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
     speedCtx.font = "15px Arial";
-    speedCtx.fillStyle = "black"
+    speedCtx.fillStyle = "black";
     speedCtx.fillText(speed + ".ms ", 18, 22);
 }
 
@@ -236,63 +236,63 @@ function draw() {
         drawDiamond(ctx, life.position.x, life.position.y, life.color);
         if(level ===2){
             for(let i = 0; i < dinding1.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding1.position.x[i], dinding1.position.y[i], dinding1.color);
-                console.log("test2")
+                console.log("test2");
             }
         }else if(level === 3){
             for(let i = 0; i < dinding1.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding1.position.x[i], dinding1.position.y[i], dinding1.color);
-                console.log("test2")
+                console.log("test2");
             }
             for(let i = 0; i < dinding2.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding2.position.x[i], dinding2.position.y[i], dinding2.color);
-                console.log("test2")
+                console.log("test2");
             }
         }else if (level === 4){
             for(let i = 0; i < dinding1.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding1.position.x[i], dinding1.position.y[i], dinding1.color);
-                console.log("test2")
+                console.log("test2");
             }
             for(let i = 0; i < dinding2.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding2.position.x[i], dinding2.position.y[i], dinding2.color);
-                console.log("test2")
+                console.log("test2");
             }
             for(let i = 0; i < dinding3.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding3.position.x[i], dinding3.position.y[i], dinding3.color);
-                console.log("test2")
+                console.log("test2");
             }
         }else if(level === 5){
             for(let i = 0; i < dinding4.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding4.position.x[i], dinding4.position.y[i], dinding4.color);
-                console.log("test2")
+                console.log("test2");
             }
             for(let i = 0; i < dinding5.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding5.position.x[i], dinding5.position.y[i], dinding5.color);
-                console.log("test2")
+                console.log("test2");
             }
         }else if(level === 6){
             for(let i = 0; i < dinding4.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding4.position.x[i], dinding4.position.y[i], dinding4.color);
-                console.log("test2")
+                console.log("test2");
             }
             for(let i = 0; i < dinding5.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding5.position.x[i], dinding5.position.y[i], dinding5.color);
-                console.log("test2")
+                console.log("test2");
             }
             for(let i = 0; i < dinding6.position.x.length; i++){
-                console.log("test")
+                console.log("test");
                 drawCell(ctx, dinding6.position.x[i], dinding6.position.y[i], dinding6.color);
-                console.log("test2")
+                console.log("test2");
             }
         }
 
@@ -412,19 +412,19 @@ function setAppleAndDiamond(AppleAndDiamond){
             for (let i = 0; i < dinding1.position.x.length; i++){
                 if (AppleAndDiamond.position.x == dinding1.position.x[i] && AppleAndDiamond.position.y == dinding1.position.y[i]){
                     AppleAndDiamond.position = initPosition();
-                };
+                }
             }
         }if(level >= 3){
             for (let i = 0; i < dinding2.position.x.length; i++){
                 if (AppleAndDiamond.position.x == dinding2.position.x[i] && AppleAndDiamond.position.y == dinding2.position.y[i]){
                     AppleAndDiamond.position = initPosition();
-                };
+                }
             }
         }if(level >= 4){
             for (let i = 0; i < dinding3.position.x.length; i++){
                 if (AppleAndDiamond.position.x == dinding3.position.x[i] && AppleAndDiamond.position.y == dinding3.position.y[i]){
                     AppleAndDiamond.position = initPosition();
-                };
+                }
             }
         }
     } if(level > 4 ){
@@ -432,18 +432,18 @@ function setAppleAndDiamond(AppleAndDiamond){
             for (let i = 0; i < dinding4.position.x.length; i++){
                 if (AppleAndDiamond.position.x == dinding4.position.x[i] && AppleAndDiamond.position.y == dinding4.position.y[i]){
                     AppleAndDiamond.position = initPosition();
-                };
+                }
             }
             for (let i = 0; i < dinding5.position.x.length; i++){
                 if (AppleAndDiamond.position.x == dinding5.position.x[i] && AppleAndDiamond.position.y == dinding5.position.y[i]){
                     AppleAndDiamond.position = initPosition();
-                };
+                }
             }
         }if(level >= 6){
             for (let i = 0; i < dinding6.position.x.length; i++){
                 if (AppleAndDiamond.position.x == dinding6.position.x[i] && AppleAndDiamond.position.y == dinding6.position.y[i]){
                     AppleAndDiamond.position = initPosition();
-                };
+                }
             }
         }
     }
@@ -466,19 +466,19 @@ function checkCollision(snakes) {
             for (let i = 0; i < dinding1.position.x.length; i++){
                 if (snakes.head.x == dinding1.position.x[i] && snakes.head.y == dinding1.position.y[i]){
                     isCollide = true;
-                };
+                }
             }
         }if(level >= 3){
             for (let i = 0; i < dinding2.position.x.length; i++){
                 if (snakes.head.x == dinding2.position.x[i] && snakes.head.y == dinding2.position.y[i]){
                     isCollide = true;
-                };
+                }
             }
         }if(level >= 4){
             for (let i = 0; i < dinding3.position.x.length; i++){
                 if (snakes.head.x == dinding3.position.x[i] && snakes.head.y == dinding3.position.y[i]){
                     isCollide = true;
-                };
+                }
             }
         }
     }else if(level > 4){
@@ -486,18 +486,18 @@ function checkCollision(snakes) {
             for (let i = 0; i < dinding4.position.x.length; i++){
                 if (snakes.head.x == dinding4.position.x[i] && snakes.head.y == dinding4.position.y[i]){
                     isCollide = true;
-                };
+                }
             }
             for (let i = 0; i < dinding5.position.x.length; i++){
                 if (snakes.head.x == dinding5.position.x[i] && snakes.head.y == dinding5.position.y[i]){
                     isCollide = true;
-                };
+                }
             }
         }if(level >= 6){
             for (let i = 0; i < dinding6.position.x.length; i++){
                 if (snakes.head.x == dinding6.position.x[i] && snakes.head.y == dinding6.position.y[i]){
                     isCollide = true;
-                };
+                }
             }
         }
     }
