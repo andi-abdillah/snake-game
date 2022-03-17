@@ -151,6 +151,11 @@ function drawDiamond(ctx, x, y) {
     ctx.drawImage(img, x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
 }
 
+function drawPanji(ctx, x, y) {
+    let img = document.getElementById('panji');
+    ctx.drawImage(img, x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+}
+
 function drawLifeScore(ctx, x, y) {
     let img = document.getElementById('life');
     ctx.drawImage(img, x*4, y, CELL_SIZE*1.4, CELL_SIZE*1.4);
@@ -237,61 +242,61 @@ function draw() {
         if(level ===2){
             for(let i = 0; i < dinding1.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding1.position.x[i], dinding1.position.y[i], dinding1.color);
+                drawPanji(ctx, dinding1.position.x[i], dinding1.position.y[i], dinding1.color);
                 console.log("test2");
             }
         }else if(level === 3){
             for(let i = 0; i < dinding1.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding1.position.x[i], dinding1.position.y[i], dinding1.color);
+                drawPanji(ctx, dinding1.position.x[i], dinding1.position.y[i], dinding1.color);
                 console.log("test2");
             }
             for(let i = 0; i < dinding2.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding2.position.x[i], dinding2.position.y[i], dinding2.color);
+                drawPanji(ctx, dinding2.position.x[i], dinding2.position.y[i], dinding2.color);
                 console.log("test2");
             }
         }else if (level === 4){
             for(let i = 0; i < dinding1.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding1.position.x[i], dinding1.position.y[i], dinding1.color);
+                drawPanji(ctx, dinding1.position.x[i], dinding1.position.y[i], dinding1.color);
                 console.log("test2");
             }
             for(let i = 0; i < dinding2.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding2.position.x[i], dinding2.position.y[i], dinding2.color);
+                drawPanji(ctx, dinding2.position.x[i], dinding2.position.y[i], dinding2.color);
                 console.log("test2");
             }
             for(let i = 0; i < dinding3.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding3.position.x[i], dinding3.position.y[i], dinding3.color);
+                drawPanji(ctx, dinding3.position.x[i], dinding3.position.y[i], dinding3.color);
                 console.log("test2");
             }
         }else if(level === 5){
             for(let i = 0; i < dinding4.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding4.position.x[i], dinding4.position.y[i], dinding4.color);
+                drawPanji(ctx, dinding4.position.x[i], dinding4.position.y[i], dinding4.color);
                 console.log("test2");
             }
             for(let i = 0; i < dinding5.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding5.position.x[i], dinding5.position.y[i], dinding5.color);
+                drawPanji(ctx, dinding5.position.x[i], dinding5.position.y[i], dinding5.color);
                 console.log("test2");
             }
         }else if(level === 6){
             for(let i = 0; i < dinding4.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding4.position.x[i], dinding4.position.y[i], dinding4.color);
+                drawPanji(ctx, dinding4.position.x[i], dinding4.position.y[i], dinding4.color);
                 console.log("test2");
             }
             for(let i = 0; i < dinding5.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding5.position.x[i], dinding5.position.y[i], dinding5.color);
+                drawPanji(ctx, dinding5.position.x[i], dinding5.position.y[i], dinding5.color);
                 console.log("test2");
             }
             for(let i = 0; i < dinding6.position.x.length; i++){
                 console.log("test");
-                drawCell(ctx, dinding6.position.x[i], dinding6.position.y[i], dinding6.color);
+                drawPanji(ctx, dinding6.position.x[i], dinding6.position.y[i], dinding6.color);
                 console.log("test2");
             }
         }
