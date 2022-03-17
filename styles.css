@@ -10,7 +10,7 @@
     width: 100%;
 }
 .container{
-    font-family:roboto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     overflow: hidden;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -50,7 +50,7 @@
         width: 100%;
     }
     .container{
-        font-family:roboto;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         overflow: hidden;
         display: grid;
         grid-template-columns: auto;
