@@ -317,7 +317,7 @@ function teleport(snake) {
 function speedUp(score){
     let multiple = Math.ceil(score/5) * 5;
     var levelUpAudio = new Audio('assets/levelUp.mp3');
-    if(score == multiple && score < 21){
+    if(score == multiple && score < 26){
         levelUpAudio.play();
         MOVE_INTERVAL -= 20;
         level++;

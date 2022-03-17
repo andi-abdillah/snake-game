@@ -5,40 +5,41 @@
     </head>
     <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <body style="text-align:center; font-family:roboto; margin-top: 30px; overflow: hidden;" scroll="no"  onload="draw();">
-        
-        <section class="left">
-            <div>
-                <h4 style="color: #3AB8AC;"><center>SNAKE GAME</center></h4>
-            </div>
-            <div>
-                <canvas id="lifeBoard" width="300" height="40" style="margin-bottom: -15px;"></canvas>
-            </div>
-            <div>
-                <canvas id="snakeBoard" width="300" height="300" style="border:3px solid #C3CFD9; margin-right: 0%; margin-bottom: -15px;"></canvas>         
-                <img src="assets/nyawa.png" id="life" alt="" width="40" height="40" style="display: none;"/>
-                <img src="assets/apple.png" id="apple" alt="" width="20" height="20" style="display: none;"/>
-                <img src="assets/ular.png" id="snake" alt="" width="20" height="20" style="display: none;"/>
-                <img src="assets/snakeBody.png" id="snakeBody" alt="" width="20" height="20" style="display: none;"/>
-            </div>
-                <br>
-            <div>
-                <canvas id="levelBoard" width="80" height="30" style="background-color: #8DD7CF;"></canvas>
-                <canvas id="score1Board" width="80" height="30" style="margin-left: 28px; background-color:#E9A2AD;"></canvas>
-                <canvas id="speedBoard" width="80" height="30" style="margin-left: 28px; background-color: #8DD7CF;"></canvas>
-            </div>
-        </section>
-        <main class="right">
-            <div>
-                <button type="button" id="Up" onclick="upButton()" class="btn btn-primary btn-lg">Up</button>
-            </div>
-            <div>
-                <button type="button" id="Left" onclick="leftButton()" class="btn btn-success btn-lg">Left</button>
-                <button type="button" id="Right" onclick="rightButton()" class="btn btn-danger btn-lg">Right</button>
-            </div>
-            <div>
-                <button type="button" id="Down" onclick="downButton()" class="btn btn-dark btn-lg">Down</button>
-            </div>
-        </main>
+    <body style="text-align:center;" scroll="no"  onload="draw();">
+        <div class="container">
+            <section class="left">
+                <div>
+                    <h4 style="color: #3AB8AC;"><center>SNAKE GAME</center></h4>
+                </div>
+                <div>
+                    <canvas id="lifeBoard" width="300" height="40" style="margin-bottom: -15px;"></canvas>
+                </div>
+                <div>
+                    <canvas id="snakeBoard" width="300" height="300" style="border:3px solid #C3CFD9; margin-right: 0%; margin-bottom: -15px;"></canvas>         
+                    <img src="assets/nyawa.png" id="life" alt="" width="40" height="40" style="display: none;"/>
+                    <img src="assets/apple.png" id="apple" alt="" width="20" height="20" style="display: none;"/>
+                    <img src="assets/ular.png" id="snake" alt="" width="20" height="20" style="display: none;"/>
+                    <img src="assets/snakeBody.png" id="snakeBody" alt="" width="20" height="20" style="display: none;"/>
+                </div>
+                    <br>
+                <div>
+                    <canvas id="levelBoard" width="80" height="30" style="background-color: #8DD7CF;"></canvas>
+                    <canvas id="score1Board" width="80" height="30" style="margin-left: 28px; background-color:#E9A2AD;"></canvas>
+                    <canvas id="speedBoard" width="80" height="30" style="margin-left: 28px; background-color: #8DD7CF;"></canvas>
+                </div>
+            </section>
+            <main class="right">
+                <div>
+                    <button type="button" id="Up" onclick="upButton()" class="btn btn-primary btn-lg">Up</button>
+                </div>
+                <div>
+                    <button type="button" id="Left" onclick="leftButton()" class="btn btn-success btn-lg">Left</button>
+                    <button type="button" id="Right" onclick="rightButton()" class="btn btn-danger btn-lg">Right</button>
+                </div>
+                <div>
+                    <button type="button" id="Down" onclick="downButton()" class="btn btn-dark btn-lg">Down</button>
+                </div>
+            </main>
+        </div>
     </body>
 </html>
