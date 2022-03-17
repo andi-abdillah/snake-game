@@ -98,6 +98,14 @@ let dinding5 = {
     color: "grey",
 }
  
+let dinding6 = {
+    position: {
+        x: [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10],
+        y: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+    },
+    color: "grey",
+}
+ 
 let life = {
     color: "red",
     position: outPosition(),
@@ -270,6 +278,22 @@ function draw() {
                 drawCell(ctx, dinding5.position.x[i], dinding5.position.y[i], dinding5.color);
                 console.log("test2")
             }
+        }else if(level === 6){
+            for(let i = 0; i < dinding4.position.x.length; i++){
+                console.log("test")
+                drawCell(ctx, dinding4.position.x[i], dinding4.position.y[i], dinding4.color);
+                console.log("test2")
+            }
+            for(let i = 0; i < dinding5.position.x.length; i++){
+                console.log("test")
+                drawCell(ctx, dinding5.position.x[i], dinding5.position.y[i], dinding5.color);
+                console.log("test2")
+            }
+            for(let i = 0; i < dinding6.position.x.length; i++){
+                console.log("test")
+                drawCell(ctx, dinding6.position.x[i], dinding6.position.y[i], dinding6.color);
+                console.log("test2")
+            }
         }
 
     }, REDRAW_INTERVAL);
@@ -299,12 +323,16 @@ function speedUp(score){
         level++;
         let levelup = level-1;
         alert("Level " + levelup + " Is Complete");
+    }else if(score == multiple && score > 26){
+        levelUpAudio.play();
+        MOVE_INTERVAL -= 5;
     }
  
 }
 
 function eatDiamond(snake, life) {
     if (snake.head.x == life.position.x && snake.head.y == life.position.y) {
+        life.position = outPosition();
         diamond++;
         score++;
         snake.body.push({x: snake.head.x, y: snake.head.y});
@@ -399,16 +427,24 @@ function setAppleAndDiamond(AppleAndDiamond){
                 };
             }
         }
-    }else if(level === 5){
-        for (let i = 0; i < dinding4.position.x.length; i++){
-            if (AppleAndDiamond.position.x == dinding4.position.x[i] && AppleAndDiamond.position.y == dinding4.position.y[i]){
-                AppleAndDiamond.position = initPosition();
-            };
-        }
-        for (let i = 0; i < dinding5.position.x.length; i++){
-            if (AppleAndDiamond.position.x == dinding5.position.x[i] && AppleAndDiamond.position.y == dinding5.position.y[i]){
-                AppleAndDiamond.position = initPosition();
-            };
+    } if(level > 4 ){
+        if(level >= 5){
+            for (let i = 0; i < dinding4.position.x.length; i++){
+                if (AppleAndDiamond.position.x == dinding4.position.x[i] && AppleAndDiamond.position.y == dinding4.position.y[i]){
+                    AppleAndDiamond.position = initPosition();
+                };
+            }
+            for (let i = 0; i < dinding5.position.x.length; i++){
+                if (AppleAndDiamond.position.x == dinding5.position.x[i] && AppleAndDiamond.position.y == dinding5.position.y[i]){
+                    AppleAndDiamond.position = initPosition();
+                };
+            }
+        }if(level >= 6){
+            for (let i = 0; i < dinding6.position.x.length; i++){
+                if (AppleAndDiamond.position.x == dinding6.position.x[i] && AppleAndDiamond.position.y == dinding6.position.y[i]){
+                    AppleAndDiamond.position = initPosition();
+                };
+            }
         }
     }
 }
@@ -445,16 +481,24 @@ function checkCollision(snakes) {
                 };
             }
         }
-    }else if(level === 5){
-        for (let i = 0; i < dinding4.position.x.length; i++){
-            if (snakes.head.x == dinding4.position.x[i] && snakes.head.y == dinding4.position.y[i]){
-                isCollide = true;
-            };
-        }
-        for (let i = 0; i < dinding5.position.x.length; i++){
-            if (snakes.head.x == dinding5.position.x[i] && snakes.head.y == dinding5.position.y[i]){
-                isCollide = true;
-            };
+    }else if(level > 4){
+        if(level >= 5){
+            for (let i = 0; i < dinding4.position.x.length; i++){
+                if (snakes.head.x == dinding4.position.x[i] && snakes.head.y == dinding4.position.y[i]){
+                    isCollide = true;
+                };
+            }
+            for (let i = 0; i < dinding5.position.x.length; i++){
+                if (snakes.head.x == dinding5.position.x[i] && snakes.head.y == dinding5.position.y[i]){
+                    isCollide = true;
+                };
+            }
+        }if(level >= 6){
+            for (let i = 0; i < dinding6.position.x.length; i++){
+                if (snakes.head.x == dinding6.position.x[i] && snakes.head.y == dinding6.position.y[i]){
+                    isCollide = true;
+                };
+            }
         }
     }
 
