@@ -1,9 +1,9 @@
-.left{
+.gameboard{
     padding-top: 8%;
     grid-area: main;
     margin-right: -30%;
 }
-.right{
+.button{
     grid-area: sidebar;
     padding-top: 35%;
     height: 300px;
@@ -38,13 +38,13 @@
     height: 50px;
 }
 @media (max-width:500px){
-    .left{
+    .gameboard{
         padding-top: 8%;
         width: 100%;
         grid-area: header;
         margin-right: auto;
     }
-    .right{
+    .button{
         grid-area: footer;
         height: 100%;
         width: 100%;
@@ -60,24 +60,24 @@
         "footer";
     }
     #Up{
-        margin-bottom: 10;
-        width: 100px;
-        height: 50px;
+        margin-bottom: 15;
+        width: 120px;
+        height: 60px;
     }
     #Left{
-        margin-bottom: 10;
+        margin-bottom: 15;
         margin-right: 40;
-        width: 100px;
-        height: 50px;
+        width: 120px;
+        height: 60px;
     }
     #Right{
-        margin-bottom: 10;
-        width: 100px;
-        height: 50px;
+        margin-bottom: 15;
+        width: 120px;
+        height: 60px;
     }
     #Down{
-        width: 100px;
-        height: 50px;
+        width: 120px;
+        height: 60px;
     }
 
 }
