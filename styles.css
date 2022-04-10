@@ -54,7 +54,7 @@
         overflow: hidden;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 50%;
+        grid-template-rows: 45% 55%;
         grid-template-areas:
         "header"
         "footer";
